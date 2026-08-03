@@ -596,8 +596,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerLogoImg = document.getElementById('headerLogoImg');
     const footerLogoImg = document.getElementById('footerLogoImg');
 
-    const logoBlanc = 'Logos/LogoBlanc.jpg';
-    const logoNegro = 'Logos/LogoNegro.jpg';
+    const logoBlanc = 'img/Logos/LogoBlanc.jpg';
+    const logoNegro = 'img/Logos/LogoNegro.jpg';
 
     function setTheme(theme) {
         if (theme === 'light') {

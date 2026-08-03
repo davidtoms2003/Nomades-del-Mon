@@ -216,12 +216,12 @@ const offersData = {
         "price": "1.890 €",
         "tag": "Nova Destinació",
         "badgeIcon": "fa-snowflake",
-        "heroImage": "tromso/TROMSO (16).jpg",
+        "heroImage": "img/tromso/TROMSO (16).jpg",
         "highlights": "Viu l'espectacle màgic de les aurores boreals i submergeix-te en la natura àrtica en estat pur.",
         "gallery": [
-            "tromso/TROMSO (14).jpg",
-            "tromso/TROMSO (5).jpg",
-            "tromso/TROMSO (22).jpg"
+            "img/tromso/TROMSO (14).jpg",
+            "img/tromso/TROMSO (5).jpg",
+            "img/tromso/TROMSO (22).jpg"
         ],
         "itinerary": [
             {
@@ -311,11 +311,11 @@ const offersData = {
                 "Crucero panorámico por los fiordos árticos",
                 "Traslados privados aeropuerto-hotel-aeropuerto y seguro de viaje completo"
             ],
-            "heroImage": "tromso/TROMSO (16).jpg",
+            "heroImage": "img/tromso/TROMSO (16).jpg",
             "gallery": [
-                "tromso/TROMSO (14).jpg",
-                "tromso/TROMSO (5).jpg",
-                "tromso/TROMSO (22).jpg"
+                "img/tromso/TROMSO (14).jpg",
+                "img/tromso/TROMSO (5).jpg",
+                "img/tromso/TROMSO (22).jpg"
             ]
         },
         "ca": {
@@ -325,11 +325,11 @@ const offersData = {
             "price": "1.890 €",
             "tag": "Nova Destinació",
             "badgeIcon": "fa-snowflake",
-            "heroImage": "tromso/TROMSO (16).jpg",
+            "heroImage": "img/tromso/TROMSO (16).jpg",
             "gallery": [
-                "tromso/TROMSO (14).jpg",
-                "tromso/TROMSO (5).jpg",
-                "tromso/TROMSO (22).jpg"
+                "img/tromso/TROMSO (14).jpg",
+                "img/tromso/TROMSO (5).jpg",
+                "img/tromso/TROMSO (22).jpg"
             ],
             "highlights": "Viu l'espectacle màgic de les aurores boreals i submergeix-te en la natura àrtica en estat pur.",
             "itinerary": [
@@ -381,12 +381,12 @@ const offersData = {
         "price": "1.500 €",
         "tag": "Exòtic",
         "badgeIcon": "fa-umbrella-beach",
-        "heroImage": "bali/Still 2025-10-11 020237_1.207.1.jpg",
+        "heroImage": "img/bali/Still 2025-10-11 020237_1.207.1.jpg",
         "highlights": "Temples enigmàtics entre la natura, terrasses d'arròs i platges de sorra blanca a Ubud i Gili Trawangan.",
         "gallery": [
-            "bali/Still 2025-10-11 020237_1.195.1.jpg",
-            "bali/Still 2025-10-11 020237_1.199.1.jpg",
-            "bali/Still 2025-10-11 020237_1.176.1.jpg"
+            "img/bali/Still 2025-10-11 020237_1.195.1.jpg",
+            "img/bali/Still 2025-10-11 020237_1.199.1.jpg",
+            "img/bali/Still 2025-10-11 020237_1.176.1.jpg"
         ],
         "itinerary": [
             {
@@ -466,11 +466,11 @@ const offersData = {
                 "5 noches en Gili Trawangan en resort 4* frente al mar",
                 "Seguro de viaje de cancelación y asistencia médica"
             ],
-            "heroImage": "bali/Still 2025-10-11 020237_1.207.1.jpg",
+            "heroImage": "img/bali/Still 2025-10-11 020237_1.207.1.jpg",
             "gallery": [
-                "bali/Still 2025-10-11 020237_1.195.1.jpg",
-                "bali/Still 2025-10-11 020237_1.199.1.jpg",
-                "bali/Still 2025-10-11 020237_1.176.1.jpg"
+                "img/bali/Still 2025-10-11 020237_1.195.1.jpg",
+                "img/bali/Still 2025-10-11 020237_1.199.1.jpg",
+                "img/bali/Still 2025-10-11 020237_1.176.1.jpg"
             ]
         },
         "ca": {
@@ -480,11 +480,11 @@ const offersData = {
             "price": "1.500 €",
             "tag": "Exòtic",
             "badgeIcon": "fa-umbrella-beach",
-            "heroImage": "bali/Still 2025-10-11 020237_1.207.1.jpg",
+            "heroImage": "img/bali/Still 2025-10-11 020237_1.207.1.jpg",
             "gallery": [
-                "bali/Still 2025-10-11 020237_1.195.1.jpg",
-                "bali/Still 2025-10-11 020237_1.199.1.jpg",
-                "bali/Still 2025-10-11 020237_1.176.1.jpg"
+                "img/bali/Still 2025-10-11 020237_1.195.1.jpg",
+                "img/bali/Still 2025-10-11 020237_1.199.1.jpg",
+                "img/bali/Still 2025-10-11 020237_1.176.1.jpg"
             ],
             "highlights": "Temples enigmàtics entre la natura, terrasses d'arròs i platges de sorra blanca a Ubud i Gili Trawangan.",
             "itinerary": [
@@ -795,12 +795,12 @@ const offersData = {
         "price": "450 €",
         "tag": "Cultura",
         "badgeIcon": "fa-landmark",
-        "heroImage": "timisoara/Still 2025-12-03 141455_1.33.1.jpg",
+        "heroImage": "img/timisoara/Still 2025-12-03 141455_1.33.1.jpg",
         "highlights": "Descobreix l'arquitectura barroca, la història vibrant i els palaus de la que va ser Capital Europea de la Cultura.",
         "gallery": [
-            "timisoara/Still 2025-12-03 141455_1.1.1.jpg",
-            "timisoara/Still 2025-12-03 141455_1.20.1.jpg",
-            "timisoara/Still 2025-12-03 141455_1.10.1.jpg"
+            "img/timisoara/Still 2025-12-03 141455_1.1.1.jpg",
+            "img/timisoara/Still 2025-12-03 141455_1.20.1.jpg",
+            "img/timisoara/Still 2025-12-03 141455_1.10.1.jpg"
         ],
         "itinerary": [
             {
@@ -869,11 +869,11 @@ const offersData = {
                 "Visita guiada en catalán/castellano por el barrio monumental",
                 "Seguro de viaje completo"
             ],
-            "heroImage": "timisoara/Still 2025-12-03 141455_1.33.1.jpg",
+            "heroImage": "img/timisoara/Still 2025-12-03 141455_1.33.1.jpg",
             "gallery": [
-                "timisoara/Still 2025-12-03 141455_1.1.1.jpg",
-                "timisoara/Still 2025-12-03 141455_1.20.1.jpg",
-                "timisoara/Still 2025-12-03 141455_1.10.1.jpg"
+                "img/timisoara/Still 2025-12-03 141455_1.1.1.jpg",
+                "img/timisoara/Still 2025-12-03 141455_1.20.1.jpg",
+                "img/timisoara/Still 2025-12-03 141455_1.10.1.jpg"
             ]
         },
         "ca": {
@@ -883,11 +883,11 @@ const offersData = {
             "price": "450 €",
             "tag": "Cultura",
             "badgeIcon": "fa-landmark",
-            "heroImage": "timisoara/Still 2025-12-03 141455_1.33.1.jpg",
+            "heroImage": "img/timisoara/Still 2025-12-03 141455_1.33.1.jpg",
             "gallery": [
-                "timisoara/Still 2025-12-03 141455_1.1.1.jpg",
-                "timisoara/Still 2025-12-03 141455_1.20.1.jpg",
-                "timisoara/Still 2025-12-03 141455_1.10.1.jpg"
+                "img/timisoara/Still 2025-12-03 141455_1.1.1.jpg",
+                "img/timisoara/Still 2025-12-03 141455_1.20.1.jpg",
+                "img/timisoara/Still 2025-12-03 141455_1.10.1.jpg"
             ],
             "highlights": "Descobreix l'arquitectura barroca, la història vibrant i els palaus de la que va ser Capital Europea de la Cultura.",
             "itinerary": [
