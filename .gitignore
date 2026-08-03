@@ -25,7 +25,10 @@ desktop.ini
 *.key
 secrets.*
 
-# Python
+# Python & Developer Scripts
+scripts/
+*.py
+*.ps1
 __pycache__/
 *.py[cod]
 *$py.class
