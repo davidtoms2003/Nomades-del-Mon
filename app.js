@@ -13,6 +13,38 @@ window.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- NOTIFICATIONS SYSTEM ---
+    let toastContainer = document.querySelector('.custom-toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.className = 'custom-toast-container';
+        document.body.appendChild(toastContainer);
+    }
+
+    window.showNotification = function(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `custom-toast toast-${type}`;
+        
+        const icon = type === 'success' ? '<i class="fa-solid fa-circle-check"></i>' : '<i class="fa-solid fa-circle-exclamation"></i>';
+        
+        toast.innerHTML = `${icon} <span>${message}</span>`;
+        toastContainer.appendChild(toast);
+        
+        // Trigger reflow to ensure animation works
+        toast.offsetHeight;
+        
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 400); // Wait for transition
+        }, 4000);
+    };
+
     // --- 0. SMART IMAGE LOADING (EARTH SPINNER) ---
     const lazySelectors = '.hero-slide, .floating-card-image img, .offer-image-wrap img, .gallery-item img, .rounded-image img';
     const elementsToLoad = document.querySelectorAll(lazySelectors);
@@ -992,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (commentsFeed) commentsFeed.prepend(newComment);
             formComentari.reset();
-            alert(msgSuccess);
+            window.showNotification(msgSuccess, 'success');
         });
     }
 
@@ -1042,7 +1074,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         (currentLang === 'es' ? '¡Enviado!' : 'Enviat!');
                     submitBtn.style.background = 'var(--accent-green, #28a745)';
                     
-                    alert(msgSuccess);
+                    window.showNotification(msgSuccess, 'success');
                     formContacte.reset();
                     
                     // Restore button after 3 seconds
@@ -1061,7 +1093,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> Error';
                     submitBtn.style.background = 'var(--accent-red, #dc3545)';
                     
-                    alert(msgError);
+                    window.showNotification(msgError, 'error');
                     
                     // Restore button after 3 seconds
                     setTimeout(() => {
@@ -1097,7 +1129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const msgConfig = currentLang === 'es' ?
                 'Configuración de Cookies: Todas las cookies esenciales y analíticas están activadas para el correcto funcionamiento de la web.' :
                 'Configuració de Cookies: Totes les cookies essencials i analítiques estan activades per al correcte funcionament del web.';
-            alert(msgConfig);
+            window.showNotification(msgConfig, 'success');
             localStorage.setItem('cookiesAccepted', 'true');
             if (cookieBanner) cookieBanner.classList.remove('active');
         });
@@ -1108,7 +1140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const msgFooter = currentLang === 'es' ?
                 'Configuración de Cookies de Nòmades Del Món:\nPuede gestionar el consentimiento de las cookies analíticas y de rendimiento.' :
                 'Configuració de Cookies de Nòmades Del Món:\nPodeu gestionar el consentiment de les cookies analítiques i de rendiment.';
-            alert(msgFooter);
+            window.showNotification(msgFooter, 'success');
         });
     }
 
