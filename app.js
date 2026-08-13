@@ -3,13 +3,11 @@
    ========================================== */
 
 // --- PRELOADER ---
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add('fade-out');
-            setTimeout(() => preloader.style.display = 'none', 600);
-        }, 800); // 800ms minimum display time for the elegant animation
+        preloader.classList.add('fade-out');
+        setTimeout(() => preloader.style.display = 'none', 600);
     }
 });
 
