@@ -996,16 +996,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 7. CONTACT FORM SUBMISSION ---
+    // --- 7. CONTACT FORM SUBMISSION (EmailJS) ---
     const formContacte = document.getElementById('formContacte');
     if (formContacte) {
         formContacte.addEventListener('submit', (e) => {
             e.preventDefault();
-            const msgContact = currentLang === 'es' ?
-                '¡Gracias por contactar con Nòmades Del Món! Hemos recibido tu consulta y un asesor te responderá enseguida.' :
-                'Gràcies per contactar amb Nòmades Del Món! Hem rebut la teva consulta i un assessor et respondrà de seguida.';
-            alert(msgContact);
-            formContacte.reset();
+
+            const submitBtn = formContacte.querySelector('button[type="submit"]');
+            const originalBtnHTML = submitBtn.innerHTML;
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + 
+                (currentLang === 'es' ? 'Enviando...' : 'Enviant...');
+
+            // Collect form data
+            const nom = document.getElementById('contacte-nom');
+            const telefon = document.getElementById('contacte-telefon');
+            const email = document.getElementById('contacte-email');
+            const missatge = document.getElementById('contacte-missatge');
+            const newsletter = document.getElementById('input-contacte-newsletter');
+
+            if (!nom || !email || !missatge) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                return;
+            }
+
+            const templateParams = {
+                from_name: nom.value,
+                from_email: email.value,
+                phone: telefon ? telefon.value : '',
+                message: missatge.value,
+                newsletter: newsletter && newsletter.checked ? 'Sí' : 'No'
+            };
+
+            emailjs.send('service_x2agye3', 'template_fnfddyo', templateParams)
+                .then(() => {
+                    const msgSuccess = currentLang === 'es' ?
+                        '¡Gracias por contactar con Nòmades Del Món! Hemos recibido tu consulta y un asesor te responderá enseguida.' :
+                        'Gràcies per contactar amb Nòmades Del Món! Hem rebut la teva consulta i un assessor et respondrà de seguida.';
+                    
+                    // Show success state on button
+                    submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> ' + 
+                        (currentLang === 'es' ? '¡Enviado!' : 'Enviat!');
+                    submitBtn.style.background = 'var(--accent-green, #28a745)';
+                    
+                    alert(msgSuccess);
+                    formContacte.reset();
+                    
+                    // Restore button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHTML;
+                        submitBtn.style.background = '';
+                    }, 3000);
+                })
+                .catch((error) => {
+                    console.error('EmailJS error:', error);
+                    const msgError = currentLang === 'es' ?
+                        'Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente por teléfono.' :
+                        'S\'ha produït un error en enviar el missatge. Si us plau, torna-ho a provar o contacta directament per telèfon.';
+                    
+                    submitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> Error';
+                    submitBtn.style.background = 'var(--accent-red, #dc3545)';
+                    
+                    alert(msgError);
+                    
+                    // Restore button after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHTML;
+                        submitBtn.style.background = '';
+                    }, 3000);
+                });
         });
     }
 
