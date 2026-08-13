@@ -2881,21 +2881,22 @@ body.theme-dark .leaflet-control-attribution {
 }
 
 .custom-toast {
-    background: var(--bg-card, #fff);
-    color: var(--text-base, #333);
+    background: var(--bg-card);
+    color: var(--text-main);
     padding: 1rem 1.5rem;
-    border-radius: var(--radius-md, 8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-family: var(--font-base, sans-serif);
+    font-family: var(--font-body);
     font-size: 1rem;
     pointer-events: auto;
     transform: translateX(120%);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
-    border-left: 4px solid var(--accent-gold, #d4af37);
+    border: 1px solid var(--border-glass);
+    border-left: 4px solid var(--primary-gold);
 }
 
 .custom-toast.toast-success {
