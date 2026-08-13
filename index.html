@@ -171,7 +171,7 @@
                                     <p>Viu l'espectacle màgic del Cercle Polar</p>
                                     <div class="floating-card-footer">
                                         <span class="slide-num">01 <small>/ 04</small></span>
-                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="aurores" title="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
+                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="aurores" title="Veure oferta" aria-label="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
                                     <p>Temples enigmàtics i platges verge</p>
                                     <div class="floating-card-footer">
                                         <span class="slide-num">02 <small>/ 04</small></span>
-                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="bali" title="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
+                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="bali" title="Veure oferta" aria-label="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                                     <p>Arquitectura barroca i palaus històrics</p>
                                     <div class="floating-card-footer">
                                         <span class="slide-num">03 <small>/ 04</small></span>
-                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="timisoara" title="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
+                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="timisoara" title="Veure oferta" aria-label="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@
                                     <p>Descobreix la màgia del desert</p>
                                     <div class="floating-card-footer">
                                         <span class="slide-num">04 <small>/ 04</small></span>
-                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="costa-oest" title="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
+                                        <button class="btn-circle-arrow hero-go-offer" data-offer-id="costa-oest" title="Veure oferta" aria-label="Veure oferta"><i class="fa-solid fa-arrow-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -4154,7 +4154,7 @@
                             <h3><i class="fa-solid fa-pen-to-square text-gold"></i> <span data-i18n="form_comment_h3">Deixa el teu comentari</span></h3>
                             <p class="form-subtext" data-i18n="form_comment_sub">Comparteix la teva experiència de viatge amb la comunitat de Nòmades Del Món.</p>
 
-                            <form id="formComentari" class="custom-form">
+                            <form id="formComentari" class="custom-form" action="#" method="POST">
                                 <div class="form-group">
                                     <label for="comentari-titol"><span data-i18n="lbl_comment_title">Títol del comentari</span> <em>*</em></label>
                                     <input type="text" id="comentari-titol" required placeholder="Ex: El nostre viatge de somni a Bali">
@@ -4228,7 +4228,7 @@
                         <h2 class="section-title" data-i18n="contact_h2">Envia'ns la teva consulta</h2>
                         <p class="lead-text" data-i18n="contact_lead">Prepara el teu proper viatge a mida amb nosaltres. Emplea el següent formulari i et respondrem al més aviat possible.</p>
 
-                        <form id="formContacte" class="custom-form">
+                        <form id="formContacte" class="custom-form" action="#" method="POST">
                             <div class="form-group">
                                 <label for="contacte-nom"><span data-i18n="lbl_name_full">Nom i cognoms</span> <em>*</em></label>
                                 <input type="text" id="contacte-nom" required placeholder="Ex: Maria Garcia Pujol">
@@ -4441,7 +4441,7 @@
     <!-- LIGHTBOX MODAL FOR GALLERY -->
     <div class="lightbox" id="lightboxModal">
         <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <img src="" alt="" id="lightboxImg">
+        <img src="" alt="Imatge ampliada" id="lightboxImg">
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 

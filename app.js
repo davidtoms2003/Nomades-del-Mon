@@ -672,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initialize Map if navigating to contacte
         if (targetId === 'contacte') {
-            setTimeout(initMap, 200);
+            requestAnimationFrame(() => setTimeout(initMap, 50));
         }
     }
 
@@ -730,7 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            if (navMenu) navMenu.classList.toggle('active');
         });
     }
 
@@ -832,10 +832,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Toggle view-all class for CSS
-        if (showingAll || filter !== 'all') {
-            ofertesGrid.classList.add('view-all');
-        } else {
-            ofertesGrid.classList.remove('view-all');
+        const ofertesGridEl = document.getElementById('ofertesGrid');
+        if (ofertesGridEl && (showingAll || filter !== 'all')) {
+            ofertesGridEl.classList.add('view-all');
+        } else if (ofertesGridEl) {
+            ofertesGridEl.classList.remove('view-all');
         }
     }
 
@@ -877,6 +878,7 @@ document.addEventListener('DOMContentLoaded', () => {
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
             const img = item.querySelector('img');
+            if (!img) return;
             const caption = item.dataset.caption || img.alt;
             window.openLightbox(img.src, caption);
         });
@@ -958,9 +960,13 @@ document.addEventListener('DOMContentLoaded', () => {
         formComentari.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const titol = document.getElementById('comentari-titol').value;
-            const text = document.getElementById('comentari-text').value;
-            const nom = document.getElementById('comentari-nom').value;
+            const titolEl = document.getElementById('comentari-titol');
+            const textEl = document.getElementById('comentari-text');
+            const nomEl = document.getElementById('comentari-nom');
+            if (!titolEl || !textEl || !nomEl) return;
+            const titol = titolEl.value;
+            const text = textEl.value;
+            const nom = nomEl.value;
 
             const msgSuccess = currentLang === 'es' ? 
                 '¡Muchas gracias! Tu comentario se ha publicado correctamente.' : 
@@ -984,7 +990,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="comment-text">${text}</p>
             `;
 
-            commentsFeed.prepend(newComment);
+            if (commentsFeed) commentsFeed.prepend(newComment);
             formComentari.reset();
             alert(msgSuccess);
         });
